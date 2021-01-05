@@ -17,5 +17,10 @@ const _delete = async (id) => {
   return id;
 };
 
+const add = async (newTodo) => {
+  const response = await axios.post(baseUrl, newTodo);
+  return response.data;
+};
+
 // eslint-disable-next-line import/no-anonymous-default-export
-export default { getAll, update, delete: _delete };
+export default { getAll, update, delete: _delete, add };

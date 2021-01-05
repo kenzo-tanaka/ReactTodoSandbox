@@ -5,11 +5,11 @@ import TodoForm from "./components/TodoForm";
 import useTodo from "./hooks/useTodo";
 
 const App = () => {
-  const { todos, toggleTodo, deleteTodo } = useTodo();
+  const { todos, toggleTodo, deleteTodo, addTodo } = useTodo();
   return (
     <div>
       <h2>Todo List</h2>
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </div>
   );
