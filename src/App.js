@@ -1,6 +1,7 @@
 import React from "react";
 
 import TodoList from "./components/TodoList";
+import TodoForm from "./components/TodoForm";
 import useTodo from "./hooks/useTodo";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <div>
       <h2>Todo List</h2>
+      <TodoForm />
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </div>
   );
