@@ -4,7 +4,7 @@ import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
 import useTodo from "./hooks/useTodo";
 
-function App() {
+const App = () => {
   const { todos, toggleTodo, deleteTodo } = useTodo();
   return (
     <div>
@@ -13,6 +13,6 @@ function App() {
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </div>
   );
-}
+};
 
 export default App;
