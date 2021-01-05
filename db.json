@@ -2,8 +2,18 @@
   "todos": [
     {
       "title": "React",
-      "completed": false,
+      "completed": true,
       "id": "d7d3d216-07b9-4496-aab7-d096c10640bb"
+    },
+    {
+      "title": "hoge",
+      "completed": true,
+      "id": "14179e02-9e49-4a1e-8247-06bcb14e15c1"
+    },
+    {
+      "title": "hogehoge",
+      "completed": false,
+      "id": "34642373-7d4e-4692-b479-96416728930c"
     }
   ]
 }
