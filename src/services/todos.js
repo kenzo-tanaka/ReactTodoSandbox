@@ -7,5 +7,15 @@ const getAll = async () => {
   return response.data;
 };
 
+const update = async (id, newTodo) => {
+  const response = await axios.put(`${baseUrl}/${id}`, newTodo);
+  return response.data;
+};
+
+const _delete = async (id) => {
+  await axios.delete(`${baseUrl}/${id}`);
+  return id;
+};
+
 // eslint-disable-next-line import/no-anonymous-default-export
-export default { getAll };
+export default { getAll, update, delete: _delete };

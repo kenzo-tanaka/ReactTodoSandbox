@@ -10,5 +10,25 @@ export default function useTodo() {
       setTodos(todos.reverse());
     });
   }, []);
-  return { todos };
+
+  const toggleTodo = (id, completed) => {
+    const todo = todos.find((todo) => todo.id === id);
+    const newTodo = { ...todo, completed: !completed };
+
+    // 更新が成功したら state を更新
+    todoService.update(id, newTodo).then((updatedTodo) => {
+      const newTodos = todos.map((todo) =>
+        todo.id !== updatedTodo.id ? todo : updatedTodo
+      );
+      setTodos(newTodos);
+    });
+  };
+
+  const deleteTodo = (id) => {
+    todoService.delete(id).then((deletedTodoId) => {
+      const newTodos = todos.filter((todo) => todo.id !== deletedTodoId);
+      setTodos(newTodos);
+    });
+  };
+  return { todos, toggleTodo, deleteTodo };
 }

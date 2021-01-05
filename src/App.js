@@ -4,11 +4,11 @@ import TodoList from "./components/TodoList";
 import useTodo from "./hooks/useTodo";
 
 function App() {
-  const { todos } = useTodo();
+  const { todos, toggleTodo, deleteTodo } = useTodo();
   return (
     <div>
       <h2>Todo List</h2>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </div>
   );
 }
