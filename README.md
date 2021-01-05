@@ -1,3 +1,10 @@
+
+```shell
+$ yarn
+$ yarn server
+$ yarn start
+```
+
 処理の流れなど理解しているところを雑に書き残しておく。
 
 `/components`下にページを構成するコンポーネントを置いていて、`App.js`にてそれらを`import`して使っている。  
